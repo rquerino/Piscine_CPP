@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:15:43 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/14 19:21:39 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/14 20:41:08 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,5 @@ private:
     std::string _darkestSecret;
 
 };
-
-void    add(void);
-Contact search(void);
-
 
 #endif
