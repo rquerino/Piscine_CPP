@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:15:42 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/14 13:58:50 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/14 19:22:42 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,14 @@ std::string Contact::getBirthdayDate(void) {
     return this->_birthdayDate;
 }
 
+std::string Contact::getFavoriteMeal(void) {
+    return this->_favoriteMeal;
+}
+
+std::string Contact::getUnderwearColor(void) {
+    return this->_underwearColor;
+}
+
 std::string Contact::getDarkestSecret(void) {
     return this->_darkestSecret;
 }
@@ -90,6 +98,14 @@ void    Contact::setPhoneNumber(std::string x) {
 }
 void    Contact::setBirthdayDate(std::string x) {
     this->_birthdayDate = x;
+    return;
+}
+void    Contact::setFavoriteMeal(std::string x) {
+    this->_favoriteMeal = x;
+    return;
+}
+void    Contact::setUnderwearColor(std::string x) {
+    this->_underwearColor = x;
     return;
 }
 void    Contact::setDarkestSecret(std::string x) {
