@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 16:15:44 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/14 20:40:40 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/14 20:47:26 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,7 +156,7 @@ int         main() {
     while (exit) {
         std::cout << "Available commands: ADD, SEARCH or EXIT." << std::endl;
         std::cin >> input;
-        if (input == "ADD" && i >= 7) {
+        if (input == "ADD" && i >= 8) {
             std::cout << "Your phonebook is already full. You can use SEARCH or EXIT." << std::endl;
         }
         else if (input == "ADD") {
