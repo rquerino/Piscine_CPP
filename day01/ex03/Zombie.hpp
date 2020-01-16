@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 04:47:06 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/15 04:54:12 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/15 15:55:13 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Zombie {
         std::string _type;
 
     public:
+        Zombie(void);
         Zombie(std::string, std::string);
         ~Zombie(void);
         void        announce(void);

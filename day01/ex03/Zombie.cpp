@@ -6,12 +6,16 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 04:47:08 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/15 04:57:35 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/15 15:55:29 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Zombie.hpp"
+
+Zombie::Zombie(void) {
+    return;
+}
 
 Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {
     return;
