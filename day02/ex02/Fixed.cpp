@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:29:42 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 18:59:44 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 19:23:07 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,10 @@ Fixed::~Fixed(void) {
 // Member functions
 int         Fixed::getRawBits( void ) const {
     return this->_n;
+}
+
+void        Fixed::setRawBits(int const raw) {
+    this->_n = raw;
 }
 
 float       Fixed::toFloat(void) const {

@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:28:06 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 16:18:40 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 19:22:36 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Fixed {
         ~Fixed(void);
 
         int         getRawBits( void ) const;
+        void        setRawBits(int const raw);
         Fixed &     operator=(Fixed const & rhs);
         float       toFloat(void) const;
         int         toInt(void) const;

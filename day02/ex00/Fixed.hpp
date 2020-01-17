@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:28:06 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 15:43:37 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 19:18:26 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ class Fixed {
         Fixed(Fixed const & src);
         ~Fixed(void);
 
-        int getRawBits( void ) const;
-        Fixed &    operator=(Fixed const & rhs);
+        int         getRawBits( void ) const;
+        void        setRawBits(int const raw);
+        Fixed &     operator=(Fixed const & rhs);
 
     private:
         int _n;

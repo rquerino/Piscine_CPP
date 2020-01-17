@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:28:06 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 18:51:43 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 19:23:23 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Fixed {
         ~Fixed(void);
 
         int                     getRawBits( void ) const;
+        void                    setRawBits(int const raw);
         // Copy
         Fixed &                 operator=(Fixed const & rhs);
         // Pre-increment/Post-increment/Pre-decrement/Post-decrement
