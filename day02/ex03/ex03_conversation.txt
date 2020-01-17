@@ -1,0 +1,3 @@
+fbertazz: I prefer to use what makes it easier for other person to read. That's why I'd use Class over namespace.
+
+He is a wise man.
