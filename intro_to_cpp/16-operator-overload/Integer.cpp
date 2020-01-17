@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 14:27:26 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 14:52:03 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 17:14:31 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int         Integer::getValue(void) const {
     return this->_n;
 }
 
-Integer &   Integer::operator-(Integer const & rhs) {
+Integer &   Integer::operator=(Integer const & rhs) {
     std::cout << "Assignation operator called from " << this->_n;
     std::cout << " to " << rhs.getValue() << std::endl;
 

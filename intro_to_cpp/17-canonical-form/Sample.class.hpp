@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:08:10 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 15:21:20 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 17:07:09 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
     Sample(Sample const & src);
     ~Sample(void);
 
-    Sample &    operator-(Sample const & rhs);
+    Sample &    operator=(Sample const & rhs);
 
     int         getFoo(void) const;
 

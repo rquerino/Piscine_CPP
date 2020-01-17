@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 14:17:01 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 14:43:43 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 17:07:24 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 
     int         getValue(void) const;
 
-    Integer &   operator-(Integer const & rhs);
+    Integer &   operator=(Integer const & rhs);
     Integer     operator+(Integer const & rhs) const;
 
 private:

@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:10:35 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 15:15:35 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/16 17:07:08 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Sample::~Sample(void) {
     std::cout << "Destructor called" << std::endl;
 }
 
-Sample &        Sample::operator-(Sample const & rhs) {
+Sample &        Sample::operator=(Sample const & rhs) {
     std::cout << "Assignment operator called" << std::endl;
 
     if (this != &rhs)
