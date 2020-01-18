@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 11:33:47 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:03:15 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:51:12 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,9 +116,9 @@ void            ScavTrap::challengeNewcomer(std::string const & target) {
 
 // Life gain/loss related
 void            ScavTrap::takeDamage(unsigned int amount) {
-    unsigned int    realDamage = amount - this->_armorDamageReduction;
+    int    realDamage = amount - this->_armorDamageReduction;
 
-    if (this->_hitPoints - realDamage < 0) {
+    if ((int) this->_hitPoints - realDamage < 0) {
         this->_hitPoints = 0;
         std::cout << "Save me from the Badass! <" << this->_name << "> was hit and received <";
         std::cout << amount - this->_armorDamageReduction << "> points of damage, dying." << std::endl;

@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 13:15:17 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:20:41 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:53:56 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ void            ClapTrap::meleeAttack(std::string const & target) {
 
 // Life gain/loss related
 void            ClapTrap::takeDamage(unsigned int amount) {
-    unsigned int    realDamage = amount - this->_armorDamageReduction;
+    int    realDamage = amount - this->_armorDamageReduction;
 
-    if (this->_hitPoints - realDamage < 0) {
+    if ((int) this->_hitPoints - realDamage < 0) {
         this->_hitPoints = 0;
         std::cout << "Save me from the Badass! <" << this->_name << "> was hit and received <";
         std::cout << amount - this->_armorDamageReduction << "> points of damage, dying." << std::endl;
