@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 00:00:40 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/18 00:20:24 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/18 13:08:37 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ class Victim {
         Victim &  operator=(Victim const & rhs);
 
         // Getters
-        std::string getName(void);
+        std::string getName(void) const;
 
         // Setters
         void        setName(std::string n);
 
         //  Others
-        void getPolymorphed() const;
+        virtual void getPolymorphed() const; // Peon inherits and has a different behavior
 };
 
 std::ostream &  operator<< (std::ostream & o, const Victim & rhs);

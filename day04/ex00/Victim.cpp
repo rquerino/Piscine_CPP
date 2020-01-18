@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 00:00:41 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/18 00:21:25 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/18 13:14:54 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #include "Victim.hpp"
 
 // Constructors
-Victim::Victim(void) {}
+Victim::Victim(void) {
+    this->_name = "Joe";
+}
 
 Victim::Victim(const Victim & copy) {
     *this = copy;
@@ -37,14 +39,14 @@ Victim &  Victim::operator=(Victim const & rhs) {
 }
 
 // overload of the << to ostream operator (without friend)
-std::ostream &  operator<< (std::ostream & o, const Victim & rhs) {
+std::ostream &   operator<<(std::ostream & o, Victim const & rhs) {
     o << "I'm " << rhs.getName() << " and I like otters !" << std::endl;
 
     return o;
 }
 
 // Getters
-std::string Victim::getName(void) {
+std::string Victim::getName(void) const {
     return this->_name;
 }
 

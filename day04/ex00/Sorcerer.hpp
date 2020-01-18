@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 22:19:24 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/18 00:22:09 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/18 13:08:27 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ public:
     Sorcerer &  operator=(Sorcerer const & rhs);
 
     // Getters
-    std::string getName(void);
-    std::string getTitle(void);
+    std::string getName(void) const;
+    std::string getTitle(void) const;
 
     // Setters
     void        setName(std::string n);
