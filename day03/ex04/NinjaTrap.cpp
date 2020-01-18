@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 14:31:40 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:25:38 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:35:30 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 
 NinjaTrap::NinjaTrap(void) {
     std::cout << "I'm a robot ninja... <NinjaTrap Constructor called>" << std::endl;
+    this->_name = "Daddy";
+    this->_hitPoints = 60;
+    this->_maxHitPoints = 60;
+    this->_energyPoints = 120;
+    this->_maxEnergyPoints = 120;
+    this->_level = 1;
+    this->_meleeAttackDamage = 60;
+    this->_rangedAttackDamage = 5;
+    this->_armorDamageReduction = 0;
+    this->_ninjaAttackDamage = 40;
 }
 
 NinjaTrap::NinjaTrap(std::string name) {

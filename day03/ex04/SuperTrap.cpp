@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 15:29:14 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:24:54 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:34:06 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 SuperTrap::SuperTrap(void) {}
 SuperTrap::SuperTrap(std::string name) {
-    std::cout << "AAAAAAAAAAND OPEN! *access denied* <Constructor called for " << name << ">" << std::endl;
+    std::cout << "Let's get this party started! <Constructor called for " << name << ">" << std::endl;
     this->_name = name;
     this->_hitPoints = 100;
     this->_maxHitPoints = 100;
@@ -32,7 +32,7 @@ SuperTrap::SuperTrap(std::string name) {
 }
 
 SuperTrap::~SuperTrap() {
-    std::cout << "Don't worry, baby! It happens to a lot of girls! <Destructor called for " << this->_name;
+    std::cout << "I'm flying! I'm really flying! <Destructor called for " << this->_name;
     std::cout << ">" << std::endl;
 }
 

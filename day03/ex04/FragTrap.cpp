@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 21:36:18 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:25:49 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:35:20 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,20 @@
 
 FragTrap::FragTrap(void) {
     std::cout << "AAAAAAAAAAND OPEN! *access denied* <FragTrap Constructor called>" << std::endl;
+    this->_name = "Daddy";
+    this->_hitPoints = 100;
+    this->_maxHitPoints = 100;
+    this->_energyPoints = 100;
+    this->_maxEnergyPoints = 100;
+    this->_level = 1;
+    this->_meleeAttackDamage = 30;
+    this->_rangedAttackDamage = 20;
+    this->_armorDamageReduction = 5;
+    this->_criticalAttackDamage = 90;
+    this->_incendiaryAttackDamage = 35;
+    this->_corrosiveAttackDamage = 45;
+    this->_shockAttackDamage = 40;
+    this->_explosiveAttackDamage = 50;
 }
 
 FragTrap::FragTrap(std::string name) {
