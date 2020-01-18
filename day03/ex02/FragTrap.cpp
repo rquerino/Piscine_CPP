@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 21:36:18 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 14:23:17 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:09:16 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,26 @@ FragTrap::FragTrap(std::string name) {
 FragTrap::~FragTrap() {
     std::cout << "Don't worry, baby! It happens to a lot of girls! <Destructor called for " << this->_name;
     std::cout << ">" << std::endl;
+}
+
+// Operator
+FragTrap &      FragTrap::operator=(FragTrap const & rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_maxHitPoints = rhs._maxHitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_maxEnergyPoints = rhs._maxEnergyPoints;
+	this->_level = rhs._level;
+	this->_meleeAttackDamage = rhs._meleeAttackDamage;
+	this->_rangedAttackDamage = rhs._rangedAttackDamage;
+	this->_armorDamageReduction = rhs._armorDamageReduction;
+    this->_criticalAttackDamage = rhs._criticalAttackDamage;
+    this->_incendiaryAttackDamage = rhs._incendiaryAttackDamage;
+    this->_corrosiveAttackDamage = rhs._corrosiveAttackDamage;
+    this->_shockAttackDamage = rhs._shockAttackDamage;
+    this->_explosiveAttackDamage = rhs._explosiveAttackDamage;
+    
+    return *this;
 }
 
 // Attacks

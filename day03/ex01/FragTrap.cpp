@@ -6,12 +6,14 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 21:36:18 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/16 23:53:11 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:17:02 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include <iostream>
+
+FragTrap::FragTrap(void) {}
 
 FragTrap::FragTrap(std::string name) : _name(name) {
     std::cout << "AAAAAAAAAAND OPEN! *access denied* <Constructor called for " << name << ">" << std::endl;
@@ -33,6 +35,22 @@ FragTrap::FragTrap(std::string name) : _name(name) {
 FragTrap::~FragTrap() {
     std::cout << "Don't worry, baby! It happens to a lot of girls! <Destructor called for " << this->_name << ">" << std::endl;
 }
+
+// Operator
+FragTrap &      FragTrap::operator=(FragTrap const & rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_maxHitPoints = rhs._maxHitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_maxEnergyPoints = rhs._maxEnergyPoints;
+	this->_level = rhs._level;
+	this->_meleeAttackDamage = rhs._meleeAttackDamage;
+	this->_rangedAttackDamage = rhs._rangedAttackDamage;
+	this->_armorDamageReduction = rhs._armorDamageReduction;
+    
+    return *this;
+}
+
 
 // Attacks
 void            FragTrap::rangedAttack(std::string const & target) {

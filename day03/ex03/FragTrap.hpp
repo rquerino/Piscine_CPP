@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 21:36:20 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 14:18:37 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:12:31 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ public:
     FragTrap(void);
     FragTrap(std::string name);
     ~FragTrap();
+    
+    // Operator
+    FragTrap &      operator=(FragTrap const & rhs);
 
     // Attacks
     void            rangedAttack(std::string const & target);

@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 12:20:27 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 14:17:44 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:11:24 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ public:
     ClapTrap(void);
     ClapTrap(std::string name);
     ~ClapTrap();
+
+    // Operator
+    ClapTrap &      operator=(ClapTrap const & rhs);
 
     // Attacks
     void            rangedAttack(std::string const & target);

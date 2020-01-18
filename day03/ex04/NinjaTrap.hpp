@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 14:31:39 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:15:25 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:22:33 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
-class NinjaTrap : public ClapTrap {
-private:
+// Trick to not call ClapTrap 2 times: 'virtual’ keyword
+class NinjaTrap : virtual public ClapTrap {
+// Now it's protected attributes
+protected:
     unsigned int    _ninjaAttackDamage;    
 
 public:
@@ -28,9 +30,9 @@ public:
     ~NinjaTrap();
 
     // Operator
-    NinjaTrap &      operator=(NinjaTrap const & rhs);
+    NinjaTrap &     operator=(NinjaTrap const & rhs);
 
-    // Random challenges
+    // Attacks
     void            rangedAttack(std::string const & target);
     void            meleeAttack(std::string const & target);
 

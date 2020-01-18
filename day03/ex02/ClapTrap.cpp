@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 13:15:17 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 14:25:50 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:06:02 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ ClapTrap::ClapTrap(std::string name) : _name(name) {
 
 ClapTrap::~ClapTrap() {
     std::cout << "I AM ON FIRE!!! OH GOD, PUT ME OUT!!! <Daddy Destructor called>" << std::endl;
+}
+
+// Operator
+ClapTrap &      ClapTrap::operator=(ClapTrap const & rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_maxHitPoints = rhs._maxHitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_maxEnergyPoints = rhs._maxEnergyPoints;
+	this->_level = rhs._level;
+	this->_meleeAttackDamage = rhs._meleeAttackDamage;
+	this->_rangedAttackDamage = rhs._rangedAttackDamage;
+	this->_armorDamageReduction = rhs._armorDamageReduction;
+    
+    return *this;
 }
 
 // Attacks

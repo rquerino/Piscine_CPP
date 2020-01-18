@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 13:15:17 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:11:05 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:20:41 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void            ClapTrap::takeDamage(unsigned int amount) {
     else {
         this->_hitPoints -= realDamage;
         std::cout << "Flesh fireworks! <" << this->_name << "> was hit and received <";
-        std::cout << amount - this->_armorDamageReduction << "> points of damage." << std::endl;
+        std::cout << realDamage << "> points of damage." << std::endl;
     }
 }
 

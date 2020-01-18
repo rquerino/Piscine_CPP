@@ -1,48 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*   SuperTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/17 14:31:39 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:15:25 by rquerino         ###   ########.fr       */
+/*   Created: 2020/01/17 15:25:53 by rquerino          #+#    #+#             */
+/*   Updated: 2020/01/17 17:25:12 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#ifndef SUPERTRAP_HPP
+# define SUPERTRAP_HPP
 # include <string>
 # include <iostream>
 # include "ClapTrap.hpp"
-# include "ScavTrap.hpp"
+# include "NinjaTrap.hpp"
 # include "FragTrap.hpp"
 
-class NinjaTrap : public ClapTrap {
-private:
-    unsigned int    _ninjaAttackDamage;    
+class SuperTrap : public FragTrap, public NinjaTrap  {
 
 public:
-    NinjaTrap(void);
-    NinjaTrap(std::string name);
-    ~NinjaTrap();
+    SuperTrap(void);
+    SuperTrap(std::string name);
+    ~SuperTrap();
 
     // Operator
-    NinjaTrap &      operator=(NinjaTrap const & rhs);
+    SuperTrap &     operator=(SuperTrap const & rhs);
 
-    // Random challenges
     void            rangedAttack(std::string const & target);
     void            meleeAttack(std::string const & target);
-
-    // Random challenge/attack
-    void            ninjaShoebox(ClapTrap& target);
-    void            ninjaShoebox(ScavTrap& target);
-    void            ninjaShoebox(FragTrap& target);
-    void            ninjaShoebox(NinjaTrap& target);
-
-    // Getters
-    unsigned int    getNinjaAttackDamage(void);
-
 };
 
 #endif

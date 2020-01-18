@@ -6,12 +6,14 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 11:33:47 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 12:10:16 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:03:15 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
+
+ScavTrap::ScavTrap(void) {}
 
 ScavTrap::ScavTrap(std::string name) : _name(name) {
     std::cout << "Look out, everybody, things are about to get awesome! <Constructor called for " << name << ">" << std::endl;
@@ -32,6 +34,21 @@ ScavTrap::ScavTrap(std::string name) : _name(name) {
 
 ScavTrap::~ScavTrap() {
     std::cout << "Hey everybody! Check out my package! <Destructor called for " << this->_name << ">" << std::endl;
+}
+
+// Operator
+ScavTrap &      ScavTrap::operator=(ScavTrap const & rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_maxHitPoints = rhs._maxHitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_maxEnergyPoints = rhs._maxEnergyPoints;
+	this->_level = rhs._level;
+	this->_meleeAttackDamage = rhs._meleeAttackDamage;
+	this->_rangedAttackDamage = rhs._rangedAttackDamage;
+	this->_armorDamageReduction = rhs._armorDamageReduction;
+    
+    return *this;
 }
 
 // Attacks

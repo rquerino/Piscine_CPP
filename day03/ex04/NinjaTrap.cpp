@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 14:31:40 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 17:14:36 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:25:38 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
-NinjaTrap::NinjaTrap(void) {}
+NinjaTrap::NinjaTrap(void) {
+    std::cout << "I'm a robot ninja... <NinjaTrap Constructor called>" << std::endl;
+}
 
 NinjaTrap::NinjaTrap(std::string name) {
     std::cout << "I'm a robot ninja... <Constructor called for " << name << ">" << std::endl;
@@ -52,7 +54,6 @@ NinjaTrap &      NinjaTrap::operator=(NinjaTrap const & rhs) {
     
     return *this;
 }
-
 
 // Attacks
 void            NinjaTrap::rangedAttack(std::string const & target) {

@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 11:33:47 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 14:23:50 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:13:00 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,26 @@ ScavTrap::ScavTrap(std::string name) {
 ScavTrap::~ScavTrap() {
     std::cout << "Hey everybody! Check out my package! <Destructor called for ";
     std::cout << this->_name << ">" << std::endl;
+}
+
+// Operator
+ScavTrap &      ScavTrap::operator=(ScavTrap const & rhs) {
+	this->_name = rhs._name;
+	this->_hitPoints = rhs._hitPoints;
+	this->_maxHitPoints = rhs._maxHitPoints;
+	this->_energyPoints = rhs._energyPoints;
+	this->_maxEnergyPoints = rhs._maxEnergyPoints;
+	this->_level = rhs._level;
+	this->_meleeAttackDamage = rhs._meleeAttackDamage;
+	this->_rangedAttackDamage = rhs._rangedAttackDamage;
+	this->_armorDamageReduction = rhs._armorDamageReduction;
+    this->_russianRouletteDamage = rhs._russianRouletteDamage;
+    this->_thumbWarDamage = rhs._thumbWarDamage;
+    this->_swallowGranadeDamage = rhs._swallowGranadeDamage;
+    this->_telescopeTheSunDamage = rhs._telescopeTheSunDamage;
+    this->_skydiveDamage = rhs._skydiveDamage;
+    
+    return *this;
 }
 
 // Attacks

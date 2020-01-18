@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 11:31:58 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/17 14:18:46 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/17 17:13:14 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ public:
     ScavTrap(void);
     ScavTrap(std::string name);
     ~ScavTrap();
+
+    // Operator
+    ScavTrap &      operator=(ScavTrap const & rhs);
 
     // Random challenges
     void            rangedAttack(std::string const & target);
