@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 17:37:11 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/18 17:43:25 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/18 20:55:58 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ AssaultTerminator::~AssaultTerminator(void) {
 
 // Operator
 AssaultTerminator &    AssaultTerminator::operator=(AssaultTerminator const & rhs) {
+    (void)rhs; // rhs was being unused
     return *this;
 }
 

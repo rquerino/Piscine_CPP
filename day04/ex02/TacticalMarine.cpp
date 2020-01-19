@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 17:20:44 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/18 17:35:48 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/18 20:57:24 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ TacticalMarine::~TacticalMarine(void) {
 
 // Operator
 TacticalMarine &    TacticalMarine::operator=(TacticalMarine const & rhs) {
+    (void)rhs; // rhs was unused
     return *this;
 }
 
