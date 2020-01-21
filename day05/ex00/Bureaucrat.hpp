@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 13:26:30 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/20 14:48:51 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/20 16:00:09 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ class Bureaucrat
         // Constructors
         Bureaucrat(void);
         Bureaucrat(const Bureaucrat & copy);
-        Bureaucrat(std::string n, unsigned int _grade);
+        Bureaucrat(std::string n, unsigned int g);
 
         // Destructor
         ~Bureaucrat();
