@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 13:40:37 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/20 17:12:37 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/20 22:45:01 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,17 @@ void    Bureaucrat::signForm(std::string formname, std::string reason) {
     else {
         std::cout << this->_name << " cannot sign " << formname;
         std::cout << " because " << reason << std::endl;
+    }
+}
+
+void    Bureaucrat::executeForm(Form const & form) {
+    if (form.getIsSigned() == false)
+        std::cout << "The form has to be signed first" << std::endl;
+    else if (form.getGradeToExec() < this->_grade)
+        std::cout << "Bureaucrat " << this->_name << " doesn't have a grade high enough to execute this form." << std::endl;
+    else
+    {
+        std::cout << "Bureaucrat " << this->_name << " executes " << form.getName() << std::endl;
+        form.execute(*this);
     }
 }

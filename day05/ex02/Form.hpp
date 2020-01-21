@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 15:30:04 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/20 17:03:20 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/20 22:54:24 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string>
 # include <iostream>
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
     private:
@@ -74,6 +76,7 @@ class Form {
 
         // Others
         void            beSigned(Bureaucrat & b);
+        virtual void    execute(Bureaucrat const & executor) const = 0;
         
         // IncrementDecrement grade
         void            incrementGrade(void);

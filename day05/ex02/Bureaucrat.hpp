@@ -6,7 +6,7 @@
 /*   By: rquerino <rquerino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 13:26:30 by rquerino          #+#    #+#             */
-/*   Updated: 2020/01/20 17:08:44 by rquerino         ###   ########.fr       */
+/*   Updated: 2020/01/20 22:54:08 by rquerino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <string>
 # include <iostream>
+
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -70,6 +74,7 @@ class Bureaucrat
         void            incrementGrade(void);
         void            decrementGrade(void);
         void            signForm(std::string formname, std::string reason);
+        void            executeForm(Form const & form);
 };
 
 // Overload <<. If put outsite the class, it doesn't use 'friend'
